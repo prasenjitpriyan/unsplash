@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+:root {
+  --theme-color: #0996a0
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg,#ede7e7,#edd5d5,#edc5c5);
+  animation: gradient-animation 1s ease infinite;
+  background-repeat: no-repeat;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #FFF;
+  padding: 1rem 1.5rem;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+  z-index: 1;
+  font-size: .9rem;
+}
+header #logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--theme-color)
+}
+header ul {
+  list-style: none;
+  display: flex;
+}
+header ul li {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+header ul li:hover {
+  color: var(--theme-color);
+  font-weight: bolder;
+}
+.active {
+  color: var(--theme-color)
+}
+@media screen and (max-width: 500px) {
+  header ul li{
+    font-size: 0.4rem;
+  }
+  header #logo{
+    font-size: 1.2;
+  }
+}
+
+.background-image{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+.background-text{
+  text-align: center;
+  color: black;
+}
+.background-text h1{
+  font-size: 2 rem;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 520px) {
+  .background-text h1 {
+    font-size: 1.4rem;
+  }
+}
+.background-text p{
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 520px) {
+  .background-text p {
+    font-size: 0.5rem;
+  }
+}
+
+#main{
+  padding: 1rem;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 10PX;
+  border: 2px solid black;
+}
+
+#photo-card {
+  position: relative;
+}
+
+#photo-card #photo-card-action {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  padding: 1rem;
+  justify-content: end;
+}
+
+#photo-card #photo-card-action button {
+  appearance: none;
+  border: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#show-more{
+  flex: content;
+  border: none;
+  justify-content: center;
+  background: transparent;
+  color: black;
+  font-size: 18px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  outline: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
